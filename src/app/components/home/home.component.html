@@ -46,7 +46,7 @@
                                    </a>
                                 </div>
                               </div>
-                              <div class="text-center pt-3" *ngIf="data.pendings?.length == 0">There is nothing in the pending zone.</div>
+                              <div class="text-center pt-3" *ngIf="data.pendings.length == 0">There is nothing in the pending zone.</div>
                             </div>
                           </div>
                           
@@ -63,7 +63,7 @@
                               <div class="example-box" *ngFor="let item of data.inProgress" cdkDrag>
                                   <img class="svg" src="assets/svg/hourglass.svg">
                                 {{item.todo}}</div>
-                                <div class="text-center pt-3" *ngIf="data.inProgress?.length == 0">There is nothing in the waiting zone.</div>
+                                <div class="text-center pt-3" *ngIf="data.inProgress.length == 0">There is nothing in the waiting zone.</div>
                             </div>
                           </div>
 
@@ -80,7 +80,7 @@
                                 <div class="example-box" *ngFor="let item of data.done" cdkDrag>
                                   <img class="svg" src="assets/svg/like.svg">
                                   {{item.todo}}</div>
-                                  <div class="text-center pt-3" *ngIf="data.done?.length == 0">There is nothing that hasn't been completed.</div>
+                                  <div class="text-center pt-3" *ngIf="data.done.length == 0">There is nothing that hasn't been completed.</div>
                               </div>
                             </div>
                     
