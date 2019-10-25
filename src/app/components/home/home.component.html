@@ -27,7 +27,7 @@
                               cdkDropList
                               #pendingList="cdkDropList"
                               [cdkDropListData]="data.pendings"
-                              [cdkDropListConnectedTo]="[pendingsList,inProgressList]"
+                              [cdkDropListConnectedTo]="[pendingList,inProgressList]"
                               class="example-list"
                               (cdkDropListDropped)="drop($event)">
                               <div class="example-box" *ngFor="let item of data.pendings" cdkDrag>

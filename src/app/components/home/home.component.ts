@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  data = {};
+  data: any = {};
   constructor(
     private taskservice:TasksService,
     private _snackBar: MatSnackBar
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
 
   getWorks(){
     this.taskservice.getTasks()
-    .subscribe((res) => {
+    .subscribe((res:any) => {
       Object.keys(res).forEach((key)=>{
         this.data[key] = res[key];
       });
@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
 
   updateWork(){
     this.taskservice.updateTask(this.data)
-    .subscribe((res)=>{
+    .subscribe((res:any)=>{
       this.getWorks();
     },(err)=>{
       console.log(err);
